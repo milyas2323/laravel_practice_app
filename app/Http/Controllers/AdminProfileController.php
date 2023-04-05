@@ -48,7 +48,7 @@ class AdminProfileController extends Controller
 
         $user = $request->user();
 
-        Auth::logout();
+        Auth::guard('admin')->logout();
 
         $user->delete();
 

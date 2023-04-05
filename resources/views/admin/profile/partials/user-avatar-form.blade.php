@@ -1,13 +1,13 @@
 <section>
     <header>
         <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
-            User Avatar
+            Admin Avatar
         </h2>
 
-        <img width="80" height="80" class="rounded-full" src="{{ "storage/".$user->avatar; }}" alt="user avatar">
+        <img width="80" height="80" class="rounded-full" src="{{ $user->imagePath }}" alt="user avatar">
 
         <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            Add or Update User Avatar
+            Add or Update Admin Avatar
         </p>
     </header>
     <form method="post" action="{{ route('admin.profile.avatar') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
