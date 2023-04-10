@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Admin\LivewireController;
 use App\Http\Controllers\Profile\AvatarController;
 use App\Http\Controllers\Admin\PermissionController;
@@ -73,6 +74,8 @@ Route::middleware('auth:admin')->name('admin.')->prefix('admin')->group(function
     Route::resource('/posts', PostController::class);
 
     Route::resource('/livewirecounter', LivewireController::class);
+
+    Route::resource('/employees', EmployeeController::class);
 });
 
 
